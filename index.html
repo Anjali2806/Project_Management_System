@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>User Management</h1>
+
+    <!-- User input section -->
+<div id="addUserSection" class="centered-section">
+    <h2>Add User</h2>
+    <label for="userInput">Username:</label>
+    <input type="text" id="userInput" placeholder="Enter username">
+    <br>
+    <label for="roleInput">Role:</label>
+    <input type="text" id="roleInput" placeholder="Enter role">
+    <br>
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br>
+    <button onclick="addUser()">Add User</button>
+</div>
+
+
+    <!-- User list section -->
+    <div id="users"></div>
+
+    <!-- Modal for success message -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="successMessage"></p>
+        </div>
+    </div>
+
+    <!-- Task assignment section -->
+<div id="assignTaskSection" class="centered-section">
+    <h2>Assign Task</h2>
+    <label for="taskInput">Task Name:</label>
+    <input type="text" id="taskInput" placeholder="Enter task name">
+    <br>
+    <label for="userSelect">Assign to User:</label>
+    <select id="userSelect">
+        <!-- Option elements for available users will be added here dynamically -->
+    </select>
+    <br>
+    <button onclick="assignTask()">Assign</button>
+</div>
+
+
+<!-- Task list section -->
+<div id="tasks"></div>
+
+<!-- Task list table -->
+<div id="taskTableContainer">
+    <table id="taskTable" class="task-table">
+        <tr>
+            <th>Task Name</th>
+            <th>Assigned To</th>
+        </tr>
+        <!-- ... (table rows will be added dynamically) ... -->
+    </table>
+</div>
+
+<!-- Chat section -->
+<div id="chatSection" class="centered-section chat-section">
+    <h2>Chat</h2>
+    <div class="chat-input-container">
+        <label for="userNameSelect">User:</label>
+        <select id="userNameSelect">
+            <!-- Option elements for available users will be added here dynamically -->
+        </select>
+    </div>
+    <div class="chat-input-container">
+        <label for="chatInput">Enter your message:</label>
+        <input type="text" id="chatInput" placeholder="Type your message">
+    </div>
+    <div class="chat-input-container">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+</div>
+
+
+    <!-- ... (rest of the code) ... -->
+
+    <script src="script.js"></script>
+</body>
+</html>
