@@ -13,6 +13,6 @@ A project is a project management tool. The user can utilize this to add user an
 
 # How to run this project
 
-* Clone the project using command - git clone 
+* Clone the project using command - git clone https://github.com/Anjali2806/Project_Management_System.git
 * Open the project in your prefered code editor.
 * Run the index.html file in your prefered web browser.
